@@ -29,7 +29,7 @@ public class Branch {
     }
 
     // Add a customer's transaction
-    public boolean addCustomer(String customerName, double amount) {
+    public boolean addCustomerTransaction(String customerName, double amount) {
         Customer existingCustomer = findCustomer(customerName);
         if(existingCustomer != null) {
             existingCustomer.addTransaction(amount);
