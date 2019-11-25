@@ -26,7 +26,6 @@ public class Bank {
         Branch branch = findBranch(branchName);
         if(branch != null) {
             return branch.newCustomer(customerName, initialAmount);
-//            return true;
         }
 
         return false;
@@ -38,7 +37,6 @@ public class Bank {
         if(branch != null) {
             return branch.addCustomerTransaction(customerName, amount);
         }
-//            return true;
 
         return false;
     }
@@ -69,7 +67,7 @@ public class Bank {
                     System.out.println("Transactions");
                     ArrayList<Double> transactions = branchCustomer.getTransactions();
                     for(int j = 0; j < transactions.size(); j++) {
-                        System.out.println("[" + (j + 1) + "] Amount : " + transactions.get(j));
+                        System.out.println("[" + (j + 1) + "] Amount : $" + transactions.get(j));
                     }
                 }
             }
