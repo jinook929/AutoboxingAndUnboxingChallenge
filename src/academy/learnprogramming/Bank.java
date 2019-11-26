@@ -69,6 +69,13 @@ public class Bank {
                     for(int j = 0; j < transactions.size(); j++) {
                         System.out.println("[" + (j + 1) + "] Amount : $" + transactions.get(j));
                     }
+
+                    double currentBalance = 0;
+
+                    for(int k = 0; k < branchCustomer.getTransactions().size(); k++) {
+                        currentBalance += branchCustomer.getTransactions().get(k);
+                    }
+                    System.out.println("=> Current balance = $" + currentBalance);
                 }
             }
 
